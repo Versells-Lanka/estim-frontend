@@ -358,7 +358,7 @@ const Calculator = () => {
             setMessage(null);
           }, 3000);
         } else if (error.response.status === 500) {
-          setMessage("Please provide customer details!");
+          setMessage("Network error. Please check your internet connection.");
           setTimeout(() => {
             setMessage(null);
           }, 3000);
@@ -435,7 +435,7 @@ const Calculator = () => {
             setMessage(null);
           }, 3000);
         } else if (error.response.status === 500) {
-          setMessage("Please provide correct details..!");
+          setMessage("Network error. Please provide correct details..!");
           setTimeout(() => {
             setMessage(null);
           }, 3000);
