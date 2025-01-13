@@ -2,7 +2,7 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 import axios from "axios";
 import { React, useEffect, useState } from "react";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
-import { FaRegFilePdf } from "react-icons/fa6";
+import { FaRegFilePdf } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 import { useNavigate, useParams } from "react-router-dom";
 import Invoice from "./Invoice";
@@ -33,6 +33,7 @@ const Searched_invoice = () => {
   const [description2, setDescription2] = useState("");
   const [description3, setDescription3] = useState("");
   const [description4, setDescription4] = useState("");
+  const [message, setMessage] = useState(null);
 
   const navigate = useNavigate();
 
@@ -68,7 +69,11 @@ const Searched_invoice = () => {
           setDescription4(response.data.description.description4);
         })
         .catch((error) => {
-          console.error("Error fetching items", error);
+          //console.error("Error fetching items", error);
+          setMessage("Network error. Please check your internet connection.");
+          setTimeout(() => {
+          setMessage(null);
+        }, 1000);
         });
     }
   }, [id]);
