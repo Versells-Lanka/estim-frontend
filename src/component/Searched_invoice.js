@@ -6,6 +6,7 @@ import { FaRegFilePdf } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 import { useNavigate, useParams } from "react-router-dom";
 import Invoice from './Invoice';
+import ErrorMessage from "../ErrorMessage.js";
 
 const Searched_invoice = () => {
   const { id } = useParams();
