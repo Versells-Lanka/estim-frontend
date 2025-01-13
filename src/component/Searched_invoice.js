@@ -5,7 +5,7 @@ import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import { FaRegFilePdf } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 import { useNavigate, useParams } from "react-router-dom";
-import Invoice from "./Invoice";
+import Invoice from './Invoice';
 
 const Searched_invoice = () => {
   const { id } = useParams();
