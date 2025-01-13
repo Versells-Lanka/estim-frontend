@@ -29,6 +29,9 @@ const ItemDetails = () => {
         setLoading(false);
       } catch (err) {
         setMessage("Failed to fetch item details. Please try again.");
+        setTimeout(() => {
+          setMessage(null);
+        }, 1000);
         setLoading(false);
       }
     };
